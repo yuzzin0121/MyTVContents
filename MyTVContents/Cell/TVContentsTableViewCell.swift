@@ -52,9 +52,8 @@ class TVContentsTableViewCell: UITableViewCell, ViewProtocol {
     func configureCollectionViweFlowLayout()  -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         let spacing = 12
-        layout.itemSize = CGSize(width: 110, height: 140)
+        layout.itemSize = CGSize(width: 110, height: 150)
         layout.minimumLineSpacing = 12
-        layout.minimumInteritemSpacing = 12
         layout.scrollDirection = .horizontal
         return layout
     }
