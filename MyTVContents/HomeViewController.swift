@@ -57,6 +57,8 @@ class HomeViewController: UIViewController, ViewProtocol {
     }
     
     func configureView() {
+       
+        
         view.backgroundColor = .black
         tableView.backgroundColor = .black
         tableView.showsVerticalScrollIndicator = false
@@ -76,7 +78,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TVContentsTableViewCell", for: indexPath) as? TVContentsTableViewCell else { return UITableViewCell() }
-        print("dmddkdk")
         cell.collectionView.delegate = self
         cell.collectionView.dataSource = self
         cell.collectionView.tag = indexPath.row
@@ -98,10 +99,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentCollectionViewCell", for: indexPath) as? ContentCollectionViewCell else {
-            print("dpdpd")
             return UICollectionViewCell()
         }
-        print("잉잉")
         
         let section = collectionView.tag
         let row = indexPath.row
@@ -121,8 +120,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         return cell
     }
-    
-    
 }
 
 

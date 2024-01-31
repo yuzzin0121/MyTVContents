@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
     let titleLabel = UILabel()
@@ -19,6 +20,22 @@ class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
         configureHierarchy()
         configureLayout()
         configureView()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        configureCell(item: nil)
+    }
+    
+    func configureCell(item: SimilarDrama?) {
+        guard let item = item else { return }
+        titleLabel.text = item.name
+        
+        if let imageString = item.backdropPath, let url = URL(string: EndPoint.basePosterURL.rawValue + imageString) {
+            posterImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
+        } else {
+            posterImageView.image = UIImage(systemName: "movieclapper")
+        }
     }
     
     func configureHierarchy() {

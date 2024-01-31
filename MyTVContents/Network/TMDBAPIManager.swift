@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+
 class TMDBAPIManager {
     static let shared = TMDBAPIManager()
     
@@ -27,6 +28,9 @@ class TMDBAPIManager {
                     fatalError("네트워킹 오류")
                 }
             }
+        
+     
+       
     }
     
     func fetchTrendingTv(completionHandler: @escaping (TVContentsModel) -> Void) {

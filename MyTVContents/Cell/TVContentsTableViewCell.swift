@@ -46,13 +46,14 @@ class TVContentsTableViewCell: UITableViewCell, ViewProtocol {
         collectionView.backgroundColor = .black
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        collectionView.register(DramaCastInfoCollectionViewCell.self, forCellWithReuseIdentifier: "DramaCastInfoCollectionViewCell")
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
     }
     
     func configureCollectionViweFlowLayout()  -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         let spacing = 12
-        layout.itemSize = CGSize(width: 110, height: 150)
+        layout.itemSize = CGSize(width: 110, height: 176)
         layout.minimumLineSpacing = 12
         layout.scrollDirection = .horizontal
         return layout

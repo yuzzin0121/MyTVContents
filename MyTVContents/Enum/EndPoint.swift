@@ -14,9 +14,14 @@ enum EndPoint: String {
     case trend = "/trending/tv"
     case popular = "/tv/popular"
     
+    case dramaInfo = "/tv/96102"
+    case similarDramaRecommendation = "/tv/96102/recommendations"
+    case dramaCaseInfo = "/tv/96102/aggregate_credits"
+    
     case basePosterURL = "https://image.tmdb.org/t/p/w500"
      
     var url: String {
        return EndPoint.baseURL + self.rawValue
     }
 }
+

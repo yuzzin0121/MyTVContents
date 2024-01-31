@@ -1,5 +1,5 @@
 //
-//  TopRatedModel.swift
+//  SimilarDramaRecommendationModel.swift
 //  MyTVContents
 //
 //  Created by 조유진 on 1/31/24.
@@ -7,37 +7,29 @@
 
 import Foundation
 
-struct TVContentsModel: Decodable {
-    let results: [TV]
+struct SimilarDramaRecommendationModel: Decodable {
+    let page: Int
+    let results: [SimilarDrama]
     let totalPages: Int
     let totalResults: Int
     
     enum CodingKeys: String, CodingKey {
+        case page
         case results
         case totalPages = "total_pages"
         case totalResults = "total_results"
     }
    
 }
-
-struct TV: Decodable {
+struct SimilarDrama: Decodable {
     let id: Int
     let name: String
-    let originalName: String
-    let posterPath: String?
+    let backdropPath: String?
     
     enum CodingKeys: String, CodingKey {
         case id
         case name
-        case originalName = "original_name"
-        case posterPath = "poster_path"
+        case backdropPath = "backdrop_path"
     }
+   
 }
-
-struct DF: Decodable {
-    let name: String
-    let age: Int
-    
-    
-}
-
