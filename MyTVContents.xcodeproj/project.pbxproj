@@ -40,6 +40,7 @@
 		61B0C9C72B6BE1FA00BE86D2 /* TMDBAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9C62B6BE1FA00BE86D2 /* TMDBAPI.swift */; };
 		61B0C9C92B6BE84600BE86D2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9C82B6BE84600BE86D2 /* BaseView.swift */; };
 		61B0C9CD2B6BE8CB00BE86D2 /* TVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9CC2B6BE8CB00BE86D2 /* TVView.swift */; };
+		61B0C9CF2B6BEA7400BE86D2 /* DramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		61B0C9C62B6BE1FA00BE86D2 /* TMDBAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPI.swift; sourceTree = "<group>"; };
 		61B0C9C82B6BE84600BE86D2 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		61B0C9CC2B6BE8CB00BE86D2 /* TVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVView.swift; sourceTree = "<group>"; };
+		61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				61B0C9A82B6A8F9200BE86D2 /* DramaDetailViewController.swift */,
+				61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */,
 			);
 			path = Drama;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				61B0C9AB2B6A901A00BE86D2 /* DramaInfoModel.swift in Sources */,
 				61B0C9C72B6BE1FA00BE86D2 /* TMDBAPI.swift in Sources */,
 				61B0C9952B6965E900BE86D2 /* TVContentsModel.swift in Sources */,
+				61B0C9CF2B6BEA7400BE86D2 /* DramaView.swift in Sources */,
 				61B0C9BD2B6AB1E000BE86D2 /* UINavigationController+Extension.swift in Sources */,
 				61B0C9C92B6BE84600BE86D2 /* BaseView.swift in Sources */,
 				61B0C9B22B6A94D300BE86D2 /* TMDBDramaAPIManager.swift in Sources */,

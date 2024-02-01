@@ -10,7 +10,7 @@ import SnapKit
 import Kingfisher
 
 class DramaDetailViewController: BaseViewController {
-    let tableView = UITableView()
+    let mainView = DramaView()
     
     let titleList: [String] = ["드라마 정보", "비슷한 드라마 추천", "드라마 캐스트 정보"]
     
@@ -20,8 +20,13 @@ class DramaDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
         configureNavigationItem()
         callRequest()
+    }
+    
+    override func loadView() {
+        self.view = mainView
     }
     
     func callRequest() {
@@ -46,36 +51,18 @@ class DramaDetailViewController: BaseViewController {
         }
         
         group.notify(queue: .main) {
-            self.tableView.reloadData()
+            self.mainView.tableView.reloadData()
         }
     }
     
-    func configureNavigationItem() {
+    override func configureNavigationItem() {
         navigationItem.title = "드라마 세부 정보"
     }
-
-    override func configureHierarchy() {
-        view.addSubview(tableView)
-    }
     
-    override func configureLayout() {
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
-        }
+    func configureTableView() {
+        mainView.tableView.delegate = self
+        mainView.tableView.dataSource = self
     }
-    
-    override func configureView() {
-        view.backgroundColor = .black
-        tableView.backgroundColor = .black
-        tableView.showsVerticalScrollIndicator = false
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = UIScreen.main.bounds.height / 2 - 48
-        tableView.register(DramaInfoTableViewCell.self, forCellReuseIdentifier: "DramaInfoTableViewCell")
-        tableView.register(TVContentsTableViewCell.self, forCellReuseIdentifier: "TVContentsTableViewCell")
-    }
-    
-
 }
 
 extension DramaDetailViewController: UITableViewDelegate, UITableViewDataSource {
