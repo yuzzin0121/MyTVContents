@@ -14,46 +14,53 @@ class TMDBDramaAPIManager {
     
     private init() {}
     
-    func fetchTvSeriesDetail(completionHandler: @escaping (DramaInfoModel) -> Void) {
-        let url = EndPoint.dramaInfo.url + "?language=ko-KR"
+    func fetchTvSeriesDetail(api: TMDBAPI,completionHandler: @escaping (DramaInfoModel) -> Void) {
         
-        AF.request(url, headers: headers)
+        AF.request(api.endpoint,
+                   method: api.method,
+                   parameters: api.parameter,
+                   encoding: URLEncoding(destination: .queryString),
+                   headers: api.header)
             .responseDecodable(of: DramaInfoModel.self) { response in
                 switch response.result {
                 case .success(let success):
                     completionHandler(success)
                 case .failure(let failure):
-                    fatalError("네트워킹 오류")
+                    print(failure)
             }
         }
     }
     
-    func fetchSimilarDramaRecommendation(completionHandler: @escaping (SimilarDramaRecommendationModel) -> Void) {
-        let url = EndPoint.similarDramaRecommendation.url + "?language=ko-KR&page=1"
+    func fetchSimilarDramaRecommendation(api: TMDBAPI, completionHandler: @escaping (SimilarDramaRecommendationModel) -> Void) {
         
-        AF.request(url, headers: headers)
+        AF.request(api.endpoint,
+                   method: api.method,
+                   parameters: api.parameter,
+                   encoding: URLEncoding(destination: .queryString),
+                   headers: api.header)
             .responseDecodable(of: SimilarDramaRecommendationModel.self) { response in
                 switch response.result {
                 case .success(let success):
-                    print(success)
                     completionHandler(success)
                 case .failure(let failure):
-                    fatalError("네트워킹 오류")
+                    print(failure)
             }
         }
     }
     
-    func fetchDramaCastInfo(completionHandler: @escaping (DramaCastInfoModel) -> Void) {
-        let url = EndPoint.dramaCaseInfo.url + "?language=ko-KR&page=1"
+    func fetchDramaCastInfo(api: TMDBAPI, completionHandler: @escaping (DramaCastInfoModel) -> Void) {
         
-        AF.request(url, headers: headers)
+        AF.request(api.endpoint,
+                   method: api.method,
+                   parameters: api.parameter,
+                   encoding: URLEncoding(destination: .queryString),
+                   headers: api.header)
             .responseDecodable(of: DramaCastInfoModel.self) { response in
                 switch response.result {
                 case .success(let success):
-//                    print(success)
                     completionHandler(success)
                 case .failure(let failure):
-                    fatalError("네트워킹 오류")
+                    print(failure)
             }
         }
     }

@@ -28,19 +28,19 @@ class DramaDetailViewController: BaseViewController {
         let group = DispatchGroup()
         
         group.enter()
-        TMDBDramaAPIManager.shared.fetchTvSeriesDetail { dramaInfoModel in
+        TMDBDramaAPIManager.shared.fetchTvSeriesDetail(api: .dramaInfo()) { dramaInfoModel in
             self.dramaInfoModel = dramaInfoModel
             group.leave()
         }
         
         group.enter()
-        TMDBDramaAPIManager.shared.fetchSimilarDramaRecommendation { similarDramaRecommendationModel in
+        TMDBDramaAPIManager.shared.fetchSimilarDramaRecommendation(api: .similarDramaRecommendation()) { similarDramaRecommendationModel in
             self.similarDramaRecommendationModel = similarDramaRecommendationModel
             group.leave()
         }
         
         group.enter()
-        TMDBDramaAPIManager.shared.fetchDramaCastInfo { dramaCastInfoModel in
+        TMDBDramaAPIManager.shared.fetchDramaCastInfo(api: .dramaCaseInfo()) { dramaCastInfoModel in
             self.dramaCastInfoModel = dramaCastInfoModel
             group.leave()
         }
@@ -157,7 +157,6 @@ extension DramaDetailViewController: UICollectionViewDelegate, UICollectionViewD
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DramaCastInfoCollectionViewCell", for: indexPath) as? DramaCastInfoCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            print("d우잉?")
             cell.configureCell(item: dramaCastInfoModel.cast[row])
             
             return cell

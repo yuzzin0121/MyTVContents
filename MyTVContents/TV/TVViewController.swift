@@ -11,8 +11,9 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-class HomeViewController: UIViewController, ViewProtocol {
-    let tableView = UITableView()
+class TVViewController: UIViewController {
+    
+    let mainView = TVView()
     
     let titleList: [String] = ["지금 뜨는 콘텐츠", "이번주 인기 콘텐츠", "취향저격 인기 콘텐츠"]
     
@@ -20,58 +21,52 @@ class HomeViewController: UIViewController, ViewProtocol {
         TVContentsModel(results: [], totalPages: 0, totalResults: 0),
         TVContentsModel(results: [], totalPages: 0, totalResults: 0),
         TVContentsModel(results: [], totalPages: 0, totalResults: 0)
-    ] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureHierarchy()
-        configureLayout()
-        configureView()
+        loadView()
+        configureTableView()
+        callRequest()
+    }
+    
+    override func loadView() {
+        self.view = mainView
+    }
+    
+    func callRequest() {
+        let group = DispatchGroup()
         
-        TMDBAPIManager.shared.fetchTrendingTv { trendingModel in
+        group.enter()
+        TMDBAPIManager.shared.fetchTv(api: .trend()) { trendingModel in
             self.tvList[0] = trendingModel
+            group.leave()
         }
         
-        TMDBAPIManager.shared.fetchTopRatedTv { topRatedModel in
+        group.enter()
+        TMDBAPIManager.shared.fetchTv(api: .topRated) { topRatedModel in
             self.tvList[1] = topRatedModel
+            group.leave()
         }
         
-        TMDBAPIManager.shared.fetchPopularTv { popularModel in
+        group.enter()
+        TMDBAPIManager.shared.fetchTv(api: .popular()) { popularModel in
             self.tvList[2] = popularModel
+            group.leave()
         }
         
-    }
-
-    func configureHierarchy() {
-        view.addSubview(tableView)
-    }
-    
-    func configureLayout() {
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(view.safeAreaLayoutGuide)
+        group.notify(queue: .main) {
+            self.mainView.tableView.reloadData()
         }
     }
-    
-    func configureView() {
-       
-        
-        view.backgroundColor = .black
-        tableView.backgroundColor = .black
-        tableView.showsVerticalScrollIndicator = false
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = UIScreen.main.bounds.height / 2 - 48
-        tableView.register(TVContentsTableViewCell.self, forCellReuseIdentifier: "TVContentsTableViewCell")
-    }
-    
 
+    func configureTableView() {
+        mainView.tableView.delegate = self
+        mainView.tableView.dataSource = self
+    }
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension TVViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titleList.count
     }
@@ -89,7 +84,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension TVViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return tvList.count
     }
@@ -122,7 +117,3 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
 }
 
-
-#Preview {
-    HomeViewController()
-}

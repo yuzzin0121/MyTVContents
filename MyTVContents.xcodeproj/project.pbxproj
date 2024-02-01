@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6130E8902B68E0B0004AE4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130E88F2B68E0B0004AE4F1 /* AppDelegate.swift */; };
 		6130E8922B68E0B0004AE4F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130E8912B68E0B0004AE4F1 /* SceneDelegate.swift */; };
-		6130E8942B68E0B0004AE4F1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130E8932B68E0B0004AE4F1 /* HomeViewController.swift */; };
+		6130E8942B68E0B0004AE4F1 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130E8932B68E0B0004AE4F1 /* TVViewController.swift */; };
 		6130E8972B68E0B0004AE4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6130E8952B68E0B0004AE4F1 /* Main.storyboard */; };
 		6130E8992B68E0B1004AE4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6130E8982B68E0B1004AE4F1 /* Assets.xcassets */; };
 		6130E89C2B68E0B1004AE4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6130E89A2B68E0B1004AE4F1 /* LaunchScreen.storyboard */; };
@@ -37,13 +37,16 @@
 		61B0C9B92B6A99F200BE86D2 /* DramaInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9B82B6A99F200BE86D2 /* DramaInfoTableViewCell.swift */; };
 		61B0C9BB2B6A9A9A00BE86D2 /* DramaCastInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9BA2B6A9A9A00BE86D2 /* DramaCastInfoCollectionViewCell.swift */; };
 		61B0C9BD2B6AB1E000BE86D2 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9BC2B6AB1E000BE86D2 /* UINavigationController+Extension.swift */; };
+		61B0C9C72B6BE1FA00BE86D2 /* TMDBAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9C62B6BE1FA00BE86D2 /* TMDBAPI.swift */; };
+		61B0C9C92B6BE84600BE86D2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9C82B6BE84600BE86D2 /* BaseView.swift */; };
+		61B0C9CD2B6BE8CB00BE86D2 /* TVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9CC2B6BE8CB00BE86D2 /* TVView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6130E88C2B68E0B0004AE4F1 /* MyTVContents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTVContents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6130E88F2B68E0B0004AE4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6130E8912B68E0B0004AE4F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6130E8932B68E0B0004AE4F1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6130E8932B68E0B0004AE4F1 /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 		6130E8962B68E0B0004AE4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6130E8982B68E0B1004AE4F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6130E89B2B68E0B1004AE4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,6 +71,9 @@
 		61B0C9B82B6A99F200BE86D2 /* DramaInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaInfoTableViewCell.swift; sourceTree = "<group>"; };
 		61B0C9BA2B6A9A9A00BE86D2 /* DramaCastInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaCastInfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		61B0C9BC2B6AB1E000BE86D2 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		61B0C9C62B6BE1FA00BE86D2 /* TMDBAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPI.swift; sourceTree = "<group>"; };
+		61B0C9C82B6BE84600BE86D2 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		61B0C9CC2B6BE8CB00BE86D2 /* TVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,8 @@
 		6130E88E2B68E0B0004AE4F1 /* MyTVContents */ = {
 			isa = PBXGroup;
 			children = (
+				61B0C9CB2B6BE8A300BE86D2 /* TV */,
+				61B0C9CA2B6BE89A00BE86D2 /* Drama */,
 				61B0C9B32B6A96C700BE86D2 /* Base */,
 				61B0C9932B6965CF00BE86D2 /* Model */,
 				61B0C98C2B6964D800BE86D2 /* Network */,
@@ -115,8 +123,6 @@
 				61B0C9702B695D0E00BE86D2 /* Protocol */,
 				6130E88F2B68E0B0004AE4F1 /* AppDelegate.swift */,
 				6130E8912B68E0B0004AE4F1 /* SceneDelegate.swift */,
-				6130E8932B68E0B0004AE4F1 /* HomeViewController.swift */,
-				61B0C9A82B6A8F9200BE86D2 /* DramaDetailViewController.swift */,
 				6130E8952B68E0B0004AE4F1 /* Main.storyboard */,
 				6130E8982B68E0B1004AE4F1 /* Assets.xcassets */,
 				6130E89A2B68E0B1004AE4F1 /* LaunchScreen.storyboard */,
@@ -176,6 +182,7 @@
 			children = (
 				61B0C98D2B6964EA00BE86D2 /* TMDBAPIManager.swift */,
 				61B0C9B12B6A94D300BE86D2 /* TMDBDramaAPIManager.swift */,
+				61B0C9C62B6BE1FA00BE86D2 /* TMDBAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -195,8 +202,26 @@
 			isa = PBXGroup;
 			children = (
 				61B0C9B42B6A96D000BE86D2 /* BaseViewController.swift */,
+				61B0C9C82B6BE84600BE86D2 /* BaseView.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		61B0C9CA2B6BE89A00BE86D2 /* Drama */ = {
+			isa = PBXGroup;
+			children = (
+				61B0C9A82B6A8F9200BE86D2 /* DramaDetailViewController.swift */,
+			);
+			path = Drama;
+			sourceTree = "<group>";
+		};
+		61B0C9CB2B6BE8A300BE86D2 /* TV */ = {
+			isa = PBXGroup;
+			children = (
+				6130E8932B68E0B0004AE4F1 /* TVViewController.swift */,
+				61B0C9CC2B6BE8CB00BE86D2 /* TVView.swift */,
+			);
+			path = TV;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61B0C9B02B6A931100BE86D2 /* DramaCastInfoModel.swift in Sources */,
-				6130E8942B68E0B0004AE4F1 /* HomeViewController.swift in Sources */,
+				6130E8942B68E0B0004AE4F1 /* TVViewController.swift in Sources */,
 				61B0C97A2B695D9400BE86D2 /* PosterImageView.swift in Sources */,
 				61B0C9AE2B6A927200BE86D2 /* SimilarDramaRecommendationModel.swift in Sources */,
 				61B0C9892B695DFA00BE86D2 /* ViewProtocol.swift in Sources */,
@@ -294,8 +319,10 @@
 				61B0C97C2B695DC400BE86D2 /* TVContentsTableViewCell.swift in Sources */,
 				61B0C9BB2B6A9A9A00BE86D2 /* DramaCastInfoCollectionViewCell.swift in Sources */,
 				61B0C9AB2B6A901A00BE86D2 /* DramaInfoModel.swift in Sources */,
+				61B0C9C72B6BE1FA00BE86D2 /* TMDBAPI.swift in Sources */,
 				61B0C9952B6965E900BE86D2 /* TVContentsModel.swift in Sources */,
 				61B0C9BD2B6AB1E000BE86D2 /* UINavigationController+Extension.swift in Sources */,
+				61B0C9C92B6BE84600BE86D2 /* BaseView.swift in Sources */,
 				61B0C9B22B6A94D300BE86D2 /* TMDBDramaAPIManager.swift in Sources */,
 				61B0C9922B69652B00BE86D2 /* APIKey.swift in Sources */,
 				61B0C9B72B6A996D00BE86D2 /* ProfileImageView.swift in Sources */,
@@ -304,6 +331,7 @@
 				6130E8922B68E0B0004AE4F1 /* SceneDelegate.swift in Sources */,
 				61B0C98B2B695E3000BE86D2 /* ContentCollectionViewCell.swift in Sources */,
 				61B0C9B92B6A99F200BE86D2 /* DramaInfoTableViewCell.swift in Sources */,
+				61B0C9CD2B6BE8CB00BE86D2 /* TVView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
