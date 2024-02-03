@@ -31,7 +31,6 @@
 		61B0C9AB2B6A901A00BE86D2 /* DramaInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9AA2B6A901A00BE86D2 /* DramaInfoModel.swift */; };
 		61B0C9AE2B6A927200BE86D2 /* SimilarDramaRecommendationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9AD2B6A927200BE86D2 /* SimilarDramaRecommendationModel.swift */; };
 		61B0C9B02B6A931100BE86D2 /* DramaCastInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9AF2B6A931100BE86D2 /* DramaCastInfoModel.swift */; };
-		61B0C9B22B6A94D300BE86D2 /* TMDBDramaAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9B12B6A94D300BE86D2 /* TMDBDramaAPIManager.swift */; };
 		61B0C9B52B6A96D000BE86D2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9B42B6A96D000BE86D2 /* BaseViewController.swift */; };
 		61B0C9B72B6A996D00BE86D2 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9B62B6A996D00BE86D2 /* ProfileImageView.swift */; };
 		61B0C9B92B6A99F200BE86D2 /* DramaInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9B82B6A99F200BE86D2 /* DramaInfoTableViewCell.swift */; };
@@ -66,7 +65,6 @@
 		61B0C9AA2B6A901A00BE86D2 /* DramaInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaInfoModel.swift; sourceTree = "<group>"; };
 		61B0C9AD2B6A927200BE86D2 /* SimilarDramaRecommendationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarDramaRecommendationModel.swift; sourceTree = "<group>"; };
 		61B0C9AF2B6A931100BE86D2 /* DramaCastInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaCastInfoModel.swift; sourceTree = "<group>"; };
-		61B0C9B12B6A94D300BE86D2 /* TMDBDramaAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBDramaAPIManager.swift; sourceTree = "<group>"; };
 		61B0C9B42B6A96D000BE86D2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		61B0C9B62B6A996D00BE86D2 /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		61B0C9B82B6A99F200BE86D2 /* DramaInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaInfoTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				61B0C98D2B6964EA00BE86D2 /* TMDBAPIManager.swift */,
-				61B0C9B12B6A94D300BE86D2 /* TMDBDramaAPIManager.swift */,
 				61B0C9C62B6BE1FA00BE86D2 /* TMDBAPI.swift */,
 			);
 			path = Network;
@@ -327,7 +324,6 @@
 				61B0C9CF2B6BEA7400BE86D2 /* DramaView.swift in Sources */,
 				61B0C9BD2B6AB1E000BE86D2 /* UINavigationController+Extension.swift in Sources */,
 				61B0C9C92B6BE84600BE86D2 /* BaseView.swift in Sources */,
-				61B0C9B22B6A94D300BE86D2 /* TMDBDramaAPIManager.swift in Sources */,
 				61B0C9922B69652B00BE86D2 /* APIKey.swift in Sources */,
 				61B0C9B72B6A996D00BE86D2 /* ProfileImageView.swift in Sources */,
 				61B0C9762B695D5A00BE86D2 /* EndPoint.swift in Sources */,

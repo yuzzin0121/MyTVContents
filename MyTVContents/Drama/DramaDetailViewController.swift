@@ -33,19 +33,19 @@ class DramaDetailViewController: BaseViewController {
         let group = DispatchGroup()
         
         group.enter()
-        TMDBDramaAPIManager.shared.fetchTvSeriesDetail(api: .dramaInfo()) { dramaInfoModel in
+        TMDBAPIManager.shared.fetchTv(type: DramaInfoModel.self, api: .dramaInfo()) { dramaInfoModel in
             self.dramaInfoModel = dramaInfoModel
             group.leave()
         }
         
         group.enter()
-        TMDBDramaAPIManager.shared.fetchSimilarDramaRecommendation(api: .similarDramaRecommendation()) { similarDramaRecommendationModel in
+        TMDBAPIManager.shared.fetchTv(type: SimilarDramaRecommendationModel.self, api: .similarDramaRecommendation()) { similarDramaRecommendationModel in
             self.similarDramaRecommendationModel = similarDramaRecommendationModel
             group.leave()
         }
         
         group.enter()
-        TMDBDramaAPIManager.shared.fetchDramaCastInfo(api: .dramaCaseInfo()) { dramaCastInfoModel in
+        TMDBAPIManager.shared.fetchTv(type: DramaCastInfoModel.self, api: .dramaCaseInfo()) { dramaCastInfoModel in
             self.dramaCastInfoModel = dramaCastInfoModel
             group.leave()
         }

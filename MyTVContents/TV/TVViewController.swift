@@ -38,19 +38,19 @@ class TVViewController: UIViewController {
         let group = DispatchGroup()
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(api: .trend()) { trendingModel in
+        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: .trend()) { trendingModel in
             self.tvList[0] = trendingModel
             group.leave()
         }
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(api: .topRated) { topRatedModel in
+        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: .topRated) { topRatedModel in
             self.tvList[1] = topRatedModel
             group.leave()
         }
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(api: .popular()) { popularModel in
+        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: .popular()) { popularModel in
             self.tvList[2] = popularModel
             group.leave()
         }
