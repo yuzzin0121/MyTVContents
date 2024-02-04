@@ -17,17 +17,18 @@ class DramaSearchView: BaseView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureSearchBar()
-        hideKeyboardWhenTapAround()
+//        hideKeyboardWhenTapAround()
     }
     
-    func hideKeyboardWhenTapAround() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        addGestureRecognizer(tapGesture)
-    }
     
-    @objc func  hideKeyboard() {
-        searchController.searchBar.endEditing(true)
-    }
+//    func hideKeyboardWhenTapAround() {
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+//        addGestureRecognizer(tapGesture)
+//    }
+//    
+//    @objc func  hideKeyboard() {
+//        searchController.searchBar.endEditing(true)
+//    }
     
     func configureCollectionViweFlowLayout()  -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
@@ -63,7 +64,6 @@ class DramaSearchView: BaseView {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: "ContentCollectionViewCell")
-        collectionView.isUserInteractionEnabled = true
     }
     
     func configureSearchBar() {

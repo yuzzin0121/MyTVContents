@@ -9,7 +9,7 @@ import Foundation
 
 struct SimilarDramaRecommendationModel: Decodable {
     let page: Int
-    let results: [SimilarDrama]
+    let results: [TV]
     let totalPages: Int
     let totalResults: Int
     

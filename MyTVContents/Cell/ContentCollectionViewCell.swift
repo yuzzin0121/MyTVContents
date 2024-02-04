@@ -27,7 +27,7 @@ class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
         configureCell(item: nil)
     }
     
-    func configureCell(item: SimilarDrama?) {
+    func configureCell(item: TV?) {
         guard let item = item else { return }
         titleLabel.text = item.name
         
@@ -59,7 +59,6 @@ class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
     }
     
     func configureView() {
-        gradientView.isUserInteractionEnabled = false
         DispatchQueue.main.async {
             self.gradientView.applyGradientBackground()
         }

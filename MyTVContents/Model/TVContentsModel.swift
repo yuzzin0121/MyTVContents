@@ -25,12 +25,14 @@ struct TV: Decodable {
     let name: String
     let originalName: String
     let posterPath: String?
+    let backdropPath: String?
     
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case originalName = "original_name"
         case posterPath = "poster_path"
+        case backdropPath = "backdrop_path"
     }
 }
 

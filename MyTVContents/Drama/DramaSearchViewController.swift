@@ -78,7 +78,6 @@ extension DramaSearchViewController: UICollectionViewDelegate, UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("클릭")
         let index = indexPath.row
         let dramaDetailVC = DramaDetailViewController()
         dramaDetailVC.id = searchedDramaList[index].id
