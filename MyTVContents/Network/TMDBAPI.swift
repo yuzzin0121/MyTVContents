@@ -14,9 +14,11 @@ enum TMDBAPI {
     case trend(page: Int=1)
     case popular(page: Int=1)
     
-    case dramaInfo(id: Int = 96102)
-    case similarDramaRecommendation(id: Int = 96102)
-    case dramaCaseInfo(id: Int = 96102)
+    case dramaInfo(id: Int)
+    case similarDramaRecommendation(id: Int)
+    case dramaCaseInfo(id: Int)
+    
+    case dramaSearch(query: String)
     
     var baseURL: String {
         return "https://api.themoviedb.org/3/"
@@ -31,9 +33,10 @@ enum TMDBAPI {
         case .dramaInfo(let id): return URL(string: baseURL + "/tv/\(id)")!
         case .similarDramaRecommendation(let id): return URL(string: baseURL +  "/tv/\(id)/recommendations")!
         case .dramaCaseInfo(let id): return URL(string: baseURL + "/tv/\(id)/aggregate_credits")!
+        case .dramaSearch: return URL(string: baseURL + "/search/tv")!
         }
     }
-    
+        
     var header: HTTPHeaders {
         return ["Authorization": APIKey.tmdbKey]
     }
@@ -57,6 +60,9 @@ enum TMDBAPI {
             ["language":"ko-KR", "page": 1]
         case .dramaCaseInfo:
             ["language":"ko-KR", "page": 1]
+            
+        case .dramaSearch(query: let query):
+            ["language":"ko-KR", "query": query]
         }
     }
 }

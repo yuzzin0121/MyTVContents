@@ -11,6 +11,7 @@ import SnapKit
 class DramaInfoTableViewCell: UITableViewCell {
     let backdropimageView = UIImageView()
     let nameLabel = UILabel()
+    let overViewLabel = UILabel()
     let creatorLabel = UILabel()
     let episodesCountLabel = UILabel()
     let seasonsCountLabel = UILabel()
@@ -36,6 +37,7 @@ class DramaInfoTableViewCell: UITableViewCell {
         }
         
         nameLabel.text = dramaInfo.name
+        overViewLabel.text = dramaInfo.overview
         
         if dramaInfo.createdBy.isEmpty == false {
             var creators = dramaInfo.createdBy[0].name
@@ -51,7 +53,7 @@ class DramaInfoTableViewCell: UITableViewCell {
     }
     
     func configureHierarchy() {
-        [backdropimageView, nameLabel, creatorLabel, episodesCountLabel, seasonsCountLabel].forEach {
+        [backdropimageView, nameLabel, overViewLabel ,creatorLabel, episodesCountLabel, seasonsCountLabel].forEach {
             contentView.addSubview($0)
         }
     }
@@ -67,8 +69,14 @@ class DramaInfoTableViewCell: UITableViewCell {
             make.height.equalTo(24)
         }
         
+        overViewLabel.snp.makeConstraints { make in
+            make.top.equalTo(nameLabel.snp.bottom).offset(8)
+            make.horizontalEdges.equalToSuperview().inset(12)
+            make.height.equalTo(80)
+        }
+        
         creatorLabel.snp.makeConstraints { make in
-            make.top.equalTo(nameLabel.snp.bottom).offset(6)
+            make.top.equalTo(overViewLabel.snp.bottom).offset(6)
             make.horizontalEdges.equalToSuperview().inset(12)
             make.height.equalTo(18)
         }
@@ -88,6 +96,9 @@ class DramaInfoTableViewCell: UITableViewCell {
         contentView.backgroundColor = .black
         nameLabel.font = .boldSystemFont(ofSize: 18)
         nameLabel.textColor = .white
+        overViewLabel.font = .systemFont(ofSize: 14)
+        overViewLabel.textColor = .systemGray6
+        overViewLabel.numberOfLines = 0
         creatorLabel.font = .systemFont(ofSize: 13)
         creatorLabel.textColor = .gray
         episodesCountLabel.font = .systemFont(ofSize: 13)

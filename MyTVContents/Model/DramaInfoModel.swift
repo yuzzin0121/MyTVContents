@@ -12,6 +12,7 @@ struct DramaInfoModel: Decodable {
     let createdBy: [Creater]
     let id: Int
     let name: String
+    let overview: String
     let numberOfEpisodes: Int
     let numberOfSeasons: Int
     
@@ -20,6 +21,7 @@ struct DramaInfoModel: Decodable {
         case createdBy = "created_by"
         case id
         case name
+        case overview
         case numberOfEpisodes = "number_of_episodes"
         case numberOfSeasons = "number_of_seasons"
     }

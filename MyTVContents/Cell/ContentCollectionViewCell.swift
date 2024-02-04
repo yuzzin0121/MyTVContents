@@ -59,6 +59,7 @@ class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
     }
     
     func configureView() {
+        gradientView.isUserInteractionEnabled = false
         DispatchQueue.main.async {
             self.gradientView.applyGradientBackground()
         }

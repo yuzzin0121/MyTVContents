@@ -14,9 +14,11 @@ class DramaDetailViewController: BaseViewController {
     
     let titleList: [String] = ["드라마 정보", "비슷한 드라마 추천", "드라마 캐스트 정보"]
     
-    var dramaInfoModel: DramaInfoModel = DramaInfoModel(backdropPath: nil, createdBy: [], id: 0, name: "", numberOfEpisodes: 0, numberOfSeasons: 0)
+    var dramaInfoModel: DramaInfoModel = DramaInfoModel(backdropPath: nil, createdBy: [], id: 0, name: "", overview: "", numberOfEpisodes: 0, numberOfSeasons: 0)
     var similarDramaRecommendationModel: SimilarDramaRecommendationModel = SimilarDramaRecommendationModel(page: 0, results: [], totalPages: 0, totalResults: 0)
     var dramaCastInfoModel: DramaCastInfoModel = DramaCastInfoModel(cast: [], id: 0)
+    
+    var id = 96102
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,19 +35,19 @@ class DramaDetailViewController: BaseViewController {
         let group = DispatchGroup()
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(type: DramaInfoModel.self, api: .dramaInfo()) { dramaInfoModel in
+        TMDBAPIManager.shared.fetchTv(type: DramaInfoModel.self, api: .dramaInfo(id: id)) { dramaInfoModel in
             self.dramaInfoModel = dramaInfoModel
             group.leave()
         }
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(type: SimilarDramaRecommendationModel.self, api: .similarDramaRecommendation()) { similarDramaRecommendationModel in
+        TMDBAPIManager.shared.fetchTv(type: SimilarDramaRecommendationModel.self, api: .similarDramaRecommendation(id: id)) { similarDramaRecommendationModel in
             self.similarDramaRecommendationModel = similarDramaRecommendationModel
             group.leave()
         }
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(type: DramaCastInfoModel.self, api: .dramaCaseInfo()) { dramaCastInfoModel in
+        TMDBAPIManager.shared.fetchTv(type: DramaCastInfoModel.self, api: .dramaCaseInfo(id: id)) { dramaCastInfoModel in
             self.dramaCastInfoModel = dramaCastInfoModel
             group.leave()
         }
@@ -98,7 +100,7 @@ extension DramaDetailViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return UIScreen.main.bounds.height / 2 - 48
+            return UIScreen.main.bounds.height / 2 + 50
         case 1:
             return UIScreen.main.bounds.height / 2
         case 2:

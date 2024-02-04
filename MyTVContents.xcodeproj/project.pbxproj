@@ -13,6 +13,9 @@
 		6130E8972B68E0B0004AE4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6130E8952B68E0B0004AE4F1 /* Main.storyboard */; };
 		6130E8992B68E0B1004AE4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6130E8982B68E0B1004AE4F1 /* Assets.xcassets */; };
 		6130E89C2B68E0B1004AE4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6130E89A2B68E0B1004AE4F1 /* LaunchScreen.storyboard */; };
+		619A12A52B70409B00E83015 /* DramaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619A12A42B70409B00E83015 /* DramaSearchViewController.swift */; };
+		619A12A72B7040B600E83015 /* DramaSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619A12A62B7040B600E83015 /* DramaSearchView.swift */; };
+		619A12A92B70437500E83015 /* DramaSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619A12A82B70437500E83015 /* DramaSearchModel.swift */; };
 		61B0C9762B695D5A00BE86D2 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9752B695D5A00BE86D2 /* EndPoint.swift */; };
 		61B0C9782B695D7C00BE86D2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9772B695D7C00BE86D2 /* UIView+Extension.swift */; };
 		61B0C97A2B695D9400BE86D2 /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9792B695D9400BE86D2 /* PosterImageView.swift */; };
@@ -51,6 +54,9 @@
 		6130E8982B68E0B1004AE4F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6130E89B2B68E0B1004AE4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6130E89D2B68E0B1004AE4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		619A12A42B70409B00E83015 /* DramaSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaSearchViewController.swift; sourceTree = "<group>"; };
+		619A12A62B7040B600E83015 /* DramaSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaSearchView.swift; sourceTree = "<group>"; };
+		619A12A82B70437500E83015 /* DramaSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaSearchModel.swift; sourceTree = "<group>"; };
 		61B0C9752B695D5A00BE86D2 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		61B0C9772B695D7C00BE86D2 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		61B0C9792B695D9400BE86D2 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
@@ -193,6 +199,7 @@
 				61B0C9AA2B6A901A00BE86D2 /* DramaInfoModel.swift */,
 				61B0C9AD2B6A927200BE86D2 /* SimilarDramaRecommendationModel.swift */,
 				61B0C9AF2B6A931100BE86D2 /* DramaCastInfoModel.swift */,
+				619A12A82B70437500E83015 /* DramaSearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -211,6 +218,8 @@
 			children = (
 				61B0C9A82B6A8F9200BE86D2 /* DramaDetailViewController.swift */,
 				61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */,
+				619A12A42B70409B00E83015 /* DramaSearchViewController.swift */,
+				619A12A62B7040B600E83015 /* DramaSearchView.swift */,
 			);
 			path = Drama;
 			sourceTree = "<group>";
@@ -312,6 +321,7 @@
 				61B0C97A2B695D9400BE86D2 /* PosterImageView.swift in Sources */,
 				61B0C9AE2B6A927200BE86D2 /* SimilarDramaRecommendationModel.swift in Sources */,
 				61B0C9892B695DFA00BE86D2 /* ViewProtocol.swift in Sources */,
+				619A12A92B70437500E83015 /* DramaSearchModel.swift in Sources */,
 				61B0C9B52B6A96D000BE86D2 /* BaseViewController.swift in Sources */,
 				61B0C98E2B6964EA00BE86D2 /* TMDBAPIManager.swift in Sources */,
 				6130E8902B68E0B0004AE4F1 /* AppDelegate.swift in Sources */,
@@ -321,12 +331,14 @@
 				61B0C9AB2B6A901A00BE86D2 /* DramaInfoModel.swift in Sources */,
 				61B0C9C72B6BE1FA00BE86D2 /* TMDBAPI.swift in Sources */,
 				61B0C9952B6965E900BE86D2 /* TVContentsModel.swift in Sources */,
+				619A12A72B7040B600E83015 /* DramaSearchView.swift in Sources */,
 				61B0C9CF2B6BEA7400BE86D2 /* DramaView.swift in Sources */,
 				61B0C9BD2B6AB1E000BE86D2 /* UINavigationController+Extension.swift in Sources */,
 				61B0C9C92B6BE84600BE86D2 /* BaseView.swift in Sources */,
 				61B0C9922B69652B00BE86D2 /* APIKey.swift in Sources */,
 				61B0C9B72B6A996D00BE86D2 /* ProfileImageView.swift in Sources */,
 				61B0C9762B695D5A00BE86D2 /* EndPoint.swift in Sources */,
+				619A12A52B70409B00E83015 /* DramaSearchViewController.swift in Sources */,
 				61B0C9782B695D7C00BE86D2 /* UIView+Extension.swift in Sources */,
 				6130E8922B68E0B0004AE4F1 /* SceneDelegate.swift in Sources */,
 				61B0C98B2B695E3000BE86D2 /* ContentCollectionViewCell.swift in Sources */,
