@@ -130,14 +130,10 @@ extension TVViewController: UICollectionViewDelegate, UICollectionViewDataSource
         let row = indexPath.row
         cell.titleLabel.text = tvList[section].results[row].name
         
-        if let urlString = tvList[section].results[row].posterPath {
-            if let url = URL(string: EndPoint.basePosterURL.rawValue + urlString) {
-                cell.posterImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
-            } else {
-                cell.posterImageView.image = UIImage(systemName: "movieclapper")
-            }
+        if let urlString = tvList[section].results[row].posterPath, let url = URL(string: EndPoint.basePosterURL.rawValue + urlString) {
+            cell.posterImageView.kf.setImage(with: url, placeholder: ImageStyle.movieClapper)
         } else {
-            cell.posterImageView.image = UIImage(systemName: "movieclapper")
+            cell.posterImageView.image = ImageStyle.movieClapper
         }
         
         collectionView.reloadData()

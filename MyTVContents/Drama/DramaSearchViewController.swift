@@ -69,9 +69,9 @@ extension DramaSearchViewController: UICollectionViewDelegate, UICollectionViewD
         
         if let urlString = searchedDramaList[indexPath.row].posterPath, let url = URL(string: EndPoint.basePosterURL.rawValue + urlString) {
            
-            cell.posterImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
+            cell.posterImageView.kf.setImage(with: url, placeholder: ImageStyle.movieClapper)
         } else {
-            cell.posterImageView.image = UIImage(systemName: "movieclapper")
+            cell.posterImageView.image = ImageStyle.movieClapper
         }
         
         return cell

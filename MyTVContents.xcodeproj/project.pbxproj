@@ -44,6 +44,7 @@
 		61B0C9CD2B6BE8CB00BE86D2 /* TVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9CC2B6BE8CB00BE86D2 /* TVView.swift */; };
 		61B0C9CF2B6BEA7400BE86D2 /* DramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */; };
 		61E8EC052B71349600BEAFE5 /* TMDBSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E8EC042B71349600BEAFE5 /* TMDBSessionManager.swift */; };
+		61E8EC072B71396D00BEAFE5 /* ImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E8EC062B71396D00BEAFE5 /* ImageStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		61B0C9CC2B6BE8CB00BE86D2 /* TVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVView.swift; sourceTree = "<group>"; };
 		61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaView.swift; sourceTree = "<group>"; };
 		61E8EC042B71349600BEAFE5 /* TMDBSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSessionManager.swift; sourceTree = "<group>"; };
+		61E8EC062B71396D00BEAFE5 /* ImageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				61B0C9752B695D5A00BE86D2 /* EndPoint.swift */,
+				61E8EC062B71396D00BEAFE5 /* ImageStyle.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				61B0C9C92B6BE84600BE86D2 /* BaseView.swift in Sources */,
 				61B0C9922B69652B00BE86D2 /* APIKey.swift in Sources */,
 				61B0C9B72B6A996D00BE86D2 /* ProfileImageView.swift in Sources */,
+				61E8EC072B71396D00BEAFE5 /* ImageStyle.swift in Sources */,
 				61B0C9762B695D5A00BE86D2 /* EndPoint.swift in Sources */,
 				619A12A52B70409B00E83015 /* DramaSearchViewController.swift in Sources */,
 				61B0C9782B695D7C00BE86D2 /* UIView+Extension.swift in Sources */,
