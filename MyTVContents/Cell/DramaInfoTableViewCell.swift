@@ -41,10 +41,11 @@ class DramaInfoTableViewCell: UITableViewCell {
         
         if dramaInfo.createdBy.isEmpty == false {
             var creators = dramaInfo.createdBy[0].name
-            for index in 1...dramaInfo.createdBy.count - 1 {
-                creators.append(", " + dramaInfo.createdBy[index].name)
+            if dramaInfo.createdBy.count > 1 {
+                for index in 1...dramaInfo.createdBy.count - 1 {
+                    creators.append(", " + dramaInfo.createdBy[index].name)
+                }
             }
-            
             creatorLabel.text = "연출: \(creators)"
         }
         
@@ -72,7 +73,7 @@ class DramaInfoTableViewCell: UITableViewCell {
         overViewLabel.snp.makeConstraints { make in
             make.top.equalTo(nameLabel.snp.bottom).offset(8)
             make.horizontalEdges.equalToSuperview().inset(12)
-            make.height.equalTo(80)
+            make.height.equalTo(40)
         }
         
         creatorLabel.snp.makeConstraints { make in

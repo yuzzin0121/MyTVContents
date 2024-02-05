@@ -23,15 +23,44 @@ class TVViewController: UIViewController {
         TVContentsModel(results: [], totalPages: 0, totalResults: 0)
     ]
     
+    let apiList: [TMDBAPI] = [.trend(), .topRated, .popular()]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadView()
         configureTableView()
-        callRequest()
+        callRequestToUseURLSession()
+//        callRequest()
     }
     
     override func loadView() {
         self.view = mainView
+    }
+    
+    // URLSession을 사용한 네트워크 요청
+    func callRequestToUseURLSession() {
+        let group = DispatchGroup()
+        
+        for index in 0...tvList.count - 1 {
+            group.enter()
+            TMDBSessionManager.shared.fetchTV(api: apiList[index]) { contentsModel, error in
+                if error == nil {
+                    guard let contentsModel = contentsModel else { return }
+                    self.tvList[index] = contentsModel
+                    
+                    // UI에 직결된 코드
+                    self.mainView.tableView.reloadData()
+                } else {
+                    // error 분기 처리, alert, toast > main  케이스마다 다르게 띄울 수 있다.
+                    fatalError("에러")
+                }
+                group.leave()
+            }
+        }
+        
+        group.notify(queue: .main) {
+            self.mainView.tableView.reloadData()
+        }
     }
     
     func callRequest() {

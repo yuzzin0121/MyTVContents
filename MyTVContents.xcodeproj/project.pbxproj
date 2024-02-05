@@ -43,6 +43,7 @@
 		61B0C9C92B6BE84600BE86D2 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9C82B6BE84600BE86D2 /* BaseView.swift */; };
 		61B0C9CD2B6BE8CB00BE86D2 /* TVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9CC2B6BE8CB00BE86D2 /* TVView.swift */; };
 		61B0C9CF2B6BEA7400BE86D2 /* DramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */; };
+		61E8EC052B71349600BEAFE5 /* TMDBSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E8EC042B71349600BEAFE5 /* TMDBSessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		61B0C9C82B6BE84600BE86D2 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		61B0C9CC2B6BE8CB00BE86D2 /* TVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVView.swift; sourceTree = "<group>"; };
 		61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaView.swift; sourceTree = "<group>"; };
+		61E8EC042B71349600BEAFE5 /* TMDBSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 			children = (
 				61B0C98D2B6964EA00BE86D2 /* TMDBAPIManager.swift */,
 				61B0C9C62B6BE1FA00BE86D2 /* TMDBAPI.swift */,
+				61E8EC042B71349600BEAFE5 /* TMDBSessionManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				6130E8922B68E0B0004AE4F1 /* SceneDelegate.swift in Sources */,
 				61B0C98B2B695E3000BE86D2 /* ContentCollectionViewCell.swift in Sources */,
 				61B0C9B92B6A99F200BE86D2 /* DramaInfoTableViewCell.swift in Sources */,
+				61E8EC052B71349600BEAFE5 /* TMDBSessionManager.swift in Sources */,
 				61B0C9CD2B6BE8CB00BE86D2 /* TVView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
