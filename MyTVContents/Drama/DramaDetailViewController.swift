@@ -9,6 +9,23 @@ import UIKit
 import SnapKit
 import Kingfisher
 
+enum Section: Int, CaseIterable {
+    case drameInfo
+    case similarDramaRecommendation
+    case dramaCaseInfo
+    
+    var sectionHeight: CGFloat {
+        switch self {
+        case .drameInfo:
+            return UIScreen.main.bounds.height / 2 + 50
+        case .similarDramaRecommendation:
+            return UIScreen.main.bounds.height / 2
+        case .dramaCaseInfo:
+            return UIScreen.main.bounds.height / 2
+        }
+    }
+}
+
 class DramaDetailViewController: BaseViewController {
     let mainView = DramaView()
     
@@ -17,7 +34,7 @@ class DramaDetailViewController: BaseViewController {
     var dramaInfoModel: DramaInfoModel = DramaInfoModel(backdropPath: nil, createdBy: [], id: 0, name: "", overview: "", numberOfEpisodes: 0, numberOfSeasons: 0)
     var similarDramaRecommendationModel: SimilarDramaRecommendationModel = SimilarDramaRecommendationModel(page: 0, results: [], totalPages: 0, totalResults: 0)
     var dramaCastInfoModel: DramaCastInfoModel = DramaCastInfoModel(cast: [], id: 0)
-    
+    var sectionList = Section.allCases
     var id = 96102
     
     override func viewDidLoad() {
@@ -35,20 +52,35 @@ class DramaDetailViewController: BaseViewController {
         let group = DispatchGroup()
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(type: DramaInfoModel.self, api: .dramaInfo(id: id)) { dramaInfoModel in
-            self.dramaInfoModel = dramaInfoModel
+        TMDBAPIManager.shared.fetchTv(type: DramaInfoModel.self, api: .dramaInfo(id: id)) { dramaInfoModel, error in
+            if error == nil {
+                guard let dramaInfoModel = dramaInfoModel else { return }
+                self.dramaInfoModel = dramaInfoModel
+            } else {
+                print("dramaInfoModel을 가져오는 요청 응답에 실패했습니다.")
+            }
             group.leave()
         }
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(type: SimilarDramaRecommendationModel.self, api: .similarDramaRecommendation(id: id)) { similarDramaRecommendationModel in
-            self.similarDramaRecommendationModel = similarDramaRecommendationModel
+        TMDBAPIManager.shared.fetchTv(type: SimilarDramaRecommendationModel.self, api: .similarDramaRecommendation(id: id)) { similarDramaRecommendationModel, error in
+            if error == nil {
+                guard let similarDramaRecommendationModel = similarDramaRecommendationModel else { return }
+                self.similarDramaRecommendationModel = similarDramaRecommendationModel
+            } else {
+                print("similarDramaRecommendationModel을 가져오는 요청 응답에 실패했습니다.")
+            }
             group.leave()
         }
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(type: DramaCastInfoModel.self, api: .dramaCaseInfo(id: id)) { dramaCastInfoModel in
-            self.dramaCastInfoModel = dramaCastInfoModel
+        TMDBAPIManager.shared.fetchTv(type: DramaCastInfoModel.self, api: .dramaCaseInfo(id: id)) { dramaCastInfoModel, error  in
+            if error == nil {
+                guard let dramaCastInfoModel = dramaCastInfoModel else { return }
+                self.dramaCastInfoModel = dramaCastInfoModel
+            } else {
+                print("dramaCastInfoModel을 가져오는 요청 응답에 실패했습니다.")
+            }
             group.leave()
         }
         
@@ -98,17 +130,7 @@ extension DramaDetailViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return UIScreen.main.bounds.height / 2 + 50
-        case 1:
-            return UIScreen.main.bounds.height / 2
-        case 2:
-            return UIScreen.main.bounds.height / 2
-        default:
-            return UITableView.automaticDimension
-        }
-        
+        return sectionList[indexPath.row].sectionHeight
     }
 
 }
