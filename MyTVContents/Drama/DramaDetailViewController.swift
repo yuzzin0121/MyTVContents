@@ -107,7 +107,7 @@ extension DramaDetailViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath.row {
-        case 0:
+        case Section.drameInfo.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DramaInfoTableViewCell", for: indexPath) as? DramaInfoTableViewCell else { return UITableViewCell() }
             
             let item = dramaInfoModel
@@ -115,7 +115,7 @@ extension DramaDetailViewController: UITableViewDelegate, UITableViewDataSource 
             
             return cell
             
-        case 1, 2:
+        case Section.similarDramaRecommendation.rawValue, Section.dramaCaseInfo.rawValue:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TVContentsTableViewCell", for: indexPath) as? TVContentsTableViewCell else { return UITableViewCell() }
             cell.collectionView.delegate = self
             cell.collectionView.dataSource = self
@@ -142,9 +142,9 @@ extension DramaDetailViewController: UICollectionViewDelegate, UICollectionViewD
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView.tag {
-        case 1:
+        case Section.similarDramaRecommendation.rawValue:
             return similarDramaRecommendationModel.results.count
-        case 2:
+        case Section.dramaCaseInfo.rawValue:
             return dramaCastInfoModel.cast.count
         default:
             return 0
@@ -157,14 +157,14 @@ extension DramaDetailViewController: UICollectionViewDelegate, UICollectionViewD
         let row = indexPath.row
         
         switch collectionView.tag {
-        case 1:
+        case Section.similarDramaRecommendation.rawValue:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContentCollectionViewCell", for: indexPath) as? ContentCollectionViewCell else {
                 return UICollectionViewCell()
             }
             cell.configureCell(item: similarDramaRecommendationModel.results[row])
             
             return cell
-        case 2:
+        case Section.dramaCaseInfo.rawValue:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DramaCastInfoCollectionViewCell", for: indexPath) as? DramaCastInfoCollectionViewCell else {
                 return UICollectionViewCell()
             }
