@@ -14,7 +14,7 @@ class TMDBAPIManager {
     
     private init() {}
     
-    func fetchTv<T: Decodable>(type: T.Type, api: TMDBAPI, completionHandler: @escaping (T) -> Void) {
+    func fetchTv<T: Decodable>(type: T.Type, api: TMDBAPI, completionHandler: @escaping (T?, NetworkError?) -> Void) {
         
         AF.request(api.endpoint,
                    method: api.method,
@@ -24,8 +24,9 @@ class TMDBAPIManager {
         .responseDecodable(of: type) { response in
             switch response.result {
             case .success(let success):
-                completionHandler(success)
+                completionHandler(success, nil)
             case .failure(let failure):
+                completionHandler(nil, .failedRequest)
                 fatalError("네트워킹 오류")
             }
         }

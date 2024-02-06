@@ -19,9 +19,14 @@ class DramaSearchViewController: UIViewController {
     }
     
     func callRequest(query: String) {
-        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: TMDBAPI.dramaSearch(query: query)) { tvContentsModel in
-            self.searchedDramaList = tvContentsModel.results
-            self.mainView.collectionView.reloadData()
+        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: TMDBAPI.dramaSearch(query: query)) { tvContentsModel, error in
+            if error == nil {
+                guard let tvContentsModel = tvContentsModel else { return }
+                self.searchedDramaList = tvContentsModel.results
+                self.mainView.collectionView.reloadData()
+            } else {
+                print("응답에 실패했습니다.")
+            }
         }
     }
     

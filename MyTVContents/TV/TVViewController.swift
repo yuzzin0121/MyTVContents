@@ -67,20 +67,35 @@ class TVViewController: UIViewController {
         let group = DispatchGroup()
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: .trend()) { trendingModel in
-            self.tvList[0] = trendingModel
+        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: .trend()) { trendingModel, error in
+            if error == nil {
+                guard let trendingModel = trendingModel else { return }
+                self.tvList[0] = trendingModel
+            } else {
+                print("trendingModel을 가져오는 요청 응답에 실패했습니다.")
+            }
             group.leave()
         }
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: .topRated) { topRatedModel in
-            self.tvList[1] = topRatedModel
+        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: .topRated) { topRatedModel, error in
+            if error == nil {
+                guard let topRatedModel = topRatedModel else { return }
+                self.tvList[1] = topRatedModel
+            } else {
+                print("topRatedModel을 가져오는 요청 응답에 실패했습니다.")
+            }
             group.leave()
         }
         
         group.enter()
-        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: .popular()) { popularModel in
-            self.tvList[2] = popularModel
+        TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: .popular()) { popularModel, error in
+            if error == nil {
+                guard let popularModel = popularModel else { return }
+                self.tvList[2] = popularModel
+            } else {
+                print("popularModel을 가져오는 요청 응답에 실패했습니다.")
+            }
             group.leave()
         }
         
