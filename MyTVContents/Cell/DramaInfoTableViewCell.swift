@@ -8,8 +8,9 @@
 import UIKit
 import SnapKit
 
-class DramaInfoTableViewCell: UITableViewCell {
+final class DramaInfoTableViewCell: UITableViewCell {
     let backdropimageView = UIImageView()
+    let playImageView = UIImageView()
     let nameLabel = UILabel()
     let overViewLabel = UILabel()
     let creatorLabel = UILabel()
@@ -46,22 +47,29 @@ class DramaInfoTableViewCell: UITableViewCell {
                     creators.append(", " + dramaInfo.createdBy[index].name)
                 }
             }
-            creatorLabel.text = "연출: \(creators)"
+            creatorLabel.text = "크리에이터: \(creators)"
         }
         
-        episodesCountLabel.text = "에피소드: \(dramaInfo.numberOfEpisodes)개"
-        seasonsCountLabel.text = "시즌: \(dramaInfo.numberOfSeasons)개"
+        episodesCountLabel.text = "에피소드 \(dramaInfo.numberOfEpisodes)개"
+        seasonsCountLabel.text = "시즌 \(dramaInfo.numberOfSeasons)개"
     }
     
     func configureHierarchy() {
         [backdropimageView, nameLabel, overViewLabel ,creatorLabel, episodesCountLabel, seasonsCountLabel].forEach {
             contentView.addSubview($0)
         }
+        
+        backdropimageView.addSubview(playImageView)
     }
     func configureLayout() {
         backdropimageView.snp.makeConstraints { make in
             make.top.horizontalEdges.equalToSuperview()
-            make.height.equalTo(240)
+            make.height.equalTo(200)
+        }
+        
+        playImageView.snp.makeConstraints { make in
+            make.center.equalTo(backdropimageView)
+            make.size.equalTo(50)
         }
         
         nameLabel.snp.makeConstraints { make in
@@ -76,14 +84,8 @@ class DramaInfoTableViewCell: UITableViewCell {
             make.height.equalTo(40)
         }
         
-        creatorLabel.snp.makeConstraints { make in
-            make.top.equalTo(overViewLabel.snp.bottom).offset(6)
-            make.horizontalEdges.equalToSuperview().inset(12)
-            make.height.equalTo(18)
-        }
-        
         episodesCountLabel.snp.makeConstraints { make in
-            make.top.equalTo(creatorLabel.snp.bottom).offset(12)
+            make.top.equalTo(overViewLabel.snp.bottom).offset(12)
             make.horizontalEdges.equalToSuperview().inset(12)
             make.height.equalTo(18)
         }
@@ -92,9 +94,20 @@ class DramaInfoTableViewCell: UITableViewCell {
             make.horizontalEdges.equalToSuperview().inset(12)
             make.height.equalTo(18)
         }
+        
+        creatorLabel.snp.makeConstraints { make in
+            make.top.equalTo(seasonsCountLabel.snp.bottom).offset(6)
+            make.horizontalEdges.equalToSuperview().inset(12)
+            make.height.equalTo(18)
+        }
+        
     }
     func configureView() {
         contentView.backgroundColor = .black
+        backdropimageView.isUserInteractionEnabled = true
+        playImageView.image = ImageStyle.play
+        playImageView.tintColor = .white
+        playImageView.contentMode = .scaleAspectFit
         nameLabel.font = .boldSystemFont(ofSize: 18)
         nameLabel.textColor = .white
         overViewLabel.font = .systemFont(ofSize: 14)

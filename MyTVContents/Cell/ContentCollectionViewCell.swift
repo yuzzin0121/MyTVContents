@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
+final class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
     let titleLabel = UILabel()
     let posterImageView = PosterImageView(frame: .zero)
     let gradientView = UIView()
@@ -32,9 +32,9 @@ class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
         titleLabel.text = item.name
         
         if let imageString = item.backdropPath, let url = URL(string: EndPoint.basePosterURL.rawValue + imageString) {
-            posterImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
+            posterImageView.kf.setImage(with: url, placeholder: ImageStyle.movieClapper)
         } else {
-            posterImageView.image = UIImage(systemName: "movieclapper")
+            posterImageView.image = ImageStyle.movieClapper
         }
     }
     

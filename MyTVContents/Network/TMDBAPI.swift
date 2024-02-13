@@ -19,9 +19,16 @@ enum TMDBAPI {
     case dramaCaseInfo(id: Int)
     
     case dramaSearch(query: String)
+    case tvSeasonsDetails(seriesId: Int, seasonNumber: Int)
+    
+    case video(seriesId: Int)
     
     var baseURL: String {
         return "https://api.themoviedb.org/3/"
+    }
+    
+    static var videoBaseURL: String {
+        return "https://www.youtube.com/watch?v="
     }
     
     var endpoint: URL {
@@ -34,6 +41,10 @@ enum TMDBAPI {
         case .similarDramaRecommendation(let id): return URL(string: baseURL +  "/tv/\(id)/recommendations")!
         case .dramaCaseInfo(let id): return URL(string: baseURL + "/tv/\(id)/aggregate_credits")!
         case .dramaSearch: return URL(string: baseURL + "/search/tv")!
+        case .tvSeasonsDetails(let seriesId, let seasonNumber): 
+            return URL(string: baseURL + "/tv/\(seriesId)/season/\(seasonNumber)")!
+        case .video(let seriesId):
+            return URL(string: baseURL + "/tv/\(seriesId)/videos")!
         }
     }
         
@@ -63,6 +74,10 @@ enum TMDBAPI {
             
         case .dramaSearch(query: let query):
             ["language":"ko-KR", "query": query]
+        case .tvSeasonsDetails(seriesId: let seriesId, seasonNumber: let seasonNumber):
+            ["language":"ko-KR"]
+        case .video(seriesId: let seriesId):
+            ["language":"ko-KR"]
         }
     }
 }

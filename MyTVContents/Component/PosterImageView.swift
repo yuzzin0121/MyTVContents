@@ -13,7 +13,7 @@ class PosterImageView: UIImageView {
         configureView()
     }
     
-    func configureView() {
+    private func configureView() {
         contentMode = .scaleAspectFill
         layer.cornerRadius = 8
         clipsToBounds = true

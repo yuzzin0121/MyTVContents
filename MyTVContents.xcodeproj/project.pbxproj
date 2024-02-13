@@ -7,12 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6108CFDA2B76110C00EF302F /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6108CFD92B76110C00EF302F /* InfoCollectionViewCell.swift */; };
 		6130E8902B68E0B0004AE4F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130E88F2B68E0B0004AE4F1 /* AppDelegate.swift */; };
 		6130E8922B68E0B0004AE4F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130E8912B68E0B0004AE4F1 /* SceneDelegate.swift */; };
 		6130E8942B68E0B0004AE4F1 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6130E8932B68E0B0004AE4F1 /* TVViewController.swift */; };
 		6130E8972B68E0B0004AE4F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6130E8952B68E0B0004AE4F1 /* Main.storyboard */; };
 		6130E8992B68E0B1004AE4F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6130E8982B68E0B1004AE4F1 /* Assets.xcassets */; };
 		6130E89C2B68E0B1004AE4F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6130E89A2B68E0B1004AE4F1 /* LaunchScreen.storyboard */; };
+		6146488E2B7B657400DA894C /* SeasonCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6146488D2B7B657400DA894C /* SeasonCollectionViewCell.swift */; };
+		614648902B7B68B800DA894C /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6146488F2B7B68B800DA894C /* UILabel+Extension.swift */; };
+		614648922B7B9FB900DA894C /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648912B7B9FB900DA894C /* String+Extension.swift */; };
+		614648942B7BAECC00DA894C /* DramaEpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648932B7BAECC00DA894C /* DramaEpisodeViewController.swift */; };
+		614648962B7BAEE000DA894C /* EpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648952B7BAEE000DA894C /* EpisodeView.swift */; };
+		614648982B7BAFC800DA894C /* EpisodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648972B7BAFC800DA894C /* EpisodeTableViewCell.swift */; };
+		6146489E2B7BD2C200DA894C /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6146489D2B7BD2C200DA894C /* VideoViewController.swift */; };
+		614648A02B7BD2E000DA894C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6146489F2B7BD2E000DA894C /* VideoView.swift */; };
+		614648A22B7BD48E00DA894C /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648A12B7BD48E00DA894C /* VideoModel.swift */; };
+		614648A52B7BD83500DA894C /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648A42B7BD83500DA894C /* TabBarController.swift */; };
+		614648A82B7BD89A00DA894C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648A72B7BD89A00DA894C /* ProfileViewController.swift */; };
+		614648AA2B7BD8B800DA894C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648A92B7BD8B800DA894C /* ProfileView.swift */; };
+		614648AC2B7BD94500DA894C /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648AB2B7BD94500DA894C /* TabItem.swift */; };
+		614648AF2B7BDDE400DA894C /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648AE2B7BDDE400DA894C /* TextFieldTableViewCell.swift */; };
+		614648B12B7BE1CC00DA894C /* EditInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648B02B7BE1CC00DA894C /* EditInfoViewController.swift */; };
+		614648B32B7BE1D900DA894C /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648B22B7BE1D900DA894C /* EditInfoView.swift */; };
+		614648B52B7BE25D00DA894C /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648B42B7BE25D00DA894C /* ProfileTextField.swift */; };
+		614648B92B7BEAEC00DA894C /* ProfileImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648B82B7BEAEC00DA894C /* ProfileImageSelectViewController.swift */; };
+		614648BB2B7BEB1200DA894C /* ProfileImageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648BA2B7BEB1200DA894C /* ProfileImageSelectView.swift */; };
+		614648BF2B7BECCA00DA894C /* NaverImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648BE2B7BECCA00DA894C /* NaverImageModel.swift */; };
+		614648C12B7BED1900DA894C /* NaverAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648C02B7BED1900DA894C /* NaverAPI.swift */; };
+		614648C32B7BEDDF00DA894C /* NaverAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648C22B7BEDDF00DA894C /* NaverAPIManager.swift */; };
+		614648C72B7BF00500DA894C /* NaverImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614648C62B7BF00500DA894C /* NaverImageCollectionViewCell.swift */; };
 		619A12A52B70409B00E83015 /* DramaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619A12A42B70409B00E83015 /* DramaSearchViewController.swift */; };
 		619A12A72B7040B600E83015 /* DramaSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619A12A62B7040B600E83015 /* DramaSearchView.swift */; };
 		619A12A92B70437500E83015 /* DramaSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619A12A82B70437500E83015 /* DramaSearchModel.swift */; };
@@ -45,9 +69,14 @@
 		61B0C9CF2B6BEA7400BE86D2 /* DramaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */; };
 		61E8EC052B71349600BEAFE5 /* TMDBSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E8EC042B71349600BEAFE5 /* TMDBSessionManager.swift */; };
 		61E8EC072B71396D00BEAFE5 /* ImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E8EC062B71396D00BEAFE5 /* ImageStyle.swift */; };
+		61E8ECA82B75222000BEAFE5 /* SelectInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E8ECA72B75222000BEAFE5 /* SelectInfoTableViewCell.swift */; };
+		61E8ECAA2B7523CB00BEAFE5 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E8ECA92B7523CB00BEAFE5 /* UIButton+Extension.swift */; };
+		61E8ECAD2B7525AE00BEAFE5 /* ReuseableProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E8ECAC2B7525AE00BEAFE5 /* ReuseableProtocol.swift */; };
+		61E8ECAF2B752A1D00BEAFE5 /* EpisodeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E8ECAE2B752A1D00BEAFE5 /* EpisodeDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6108CFD92B76110C00EF302F /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		6130E88C2B68E0B0004AE4F1 /* MyTVContents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTVContents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6130E88F2B68E0B0004AE4F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6130E8912B68E0B0004AE4F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +85,29 @@
 		6130E8982B68E0B1004AE4F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6130E89B2B68E0B1004AE4F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6130E89D2B68E0B1004AE4F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6146488D2B7B657400DA894C /* SeasonCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonCollectionViewCell.swift; sourceTree = "<group>"; };
+		6146488F2B7B68B800DA894C /* UILabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
+		614648912B7B9FB900DA894C /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		614648932B7BAECC00DA894C /* DramaEpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaEpisodeViewController.swift; sourceTree = "<group>"; };
+		614648952B7BAEE000DA894C /* EpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeView.swift; sourceTree = "<group>"; };
+		614648972B7BAFC800DA894C /* EpisodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTableViewCell.swift; sourceTree = "<group>"; };
+		6146489D2B7BD2C200DA894C /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		6146489F2B7BD2E000DA894C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		614648A12B7BD48E00DA894C /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		614648A42B7BD83500DA894C /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		614648A72B7BD89A00DA894C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		614648A92B7BD8B800DA894C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		614648AB2B7BD94500DA894C /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		614648AE2B7BDDE400DA894C /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		614648B02B7BE1CC00DA894C /* EditInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoViewController.swift; sourceTree = "<group>"; };
+		614648B22B7BE1D900DA894C /* EditInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditInfoView.swift; sourceTree = "<group>"; };
+		614648B42B7BE25D00DA894C /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		614648B82B7BEAEC00DA894C /* ProfileImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageSelectViewController.swift; sourceTree = "<group>"; };
+		614648BA2B7BEB1200DA894C /* ProfileImageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageSelectView.swift; sourceTree = "<group>"; };
+		614648BE2B7BECCA00DA894C /* NaverImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverImageModel.swift; sourceTree = "<group>"; };
+		614648C02B7BED1900DA894C /* NaverAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverAPI.swift; sourceTree = "<group>"; };
+		614648C22B7BEDDF00DA894C /* NaverAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverAPIManager.swift; sourceTree = "<group>"; };
+		614648C62B7BF00500DA894C /* NaverImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaverImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		619A12A42B70409B00E83015 /* DramaSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaSearchViewController.swift; sourceTree = "<group>"; };
 		619A12A62B7040B600E83015 /* DramaSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaSearchView.swift; sourceTree = "<group>"; };
 		619A12A82B70437500E83015 /* DramaSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaSearchModel.swift; sourceTree = "<group>"; };
@@ -84,6 +136,10 @@
 		61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaView.swift; sourceTree = "<group>"; };
 		61E8EC042B71349600BEAFE5 /* TMDBSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSessionManager.swift; sourceTree = "<group>"; };
 		61E8EC062B71396D00BEAFE5 /* ImageStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStyle.swift; sourceTree = "<group>"; };
+		61E8ECA72B75222000BEAFE5 /* SelectInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInfoTableViewCell.swift; sourceTree = "<group>"; };
+		61E8ECA92B7523CB00BEAFE5 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		61E8ECAC2B7525AE00BEAFE5 /* ReuseableProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseableProtocol.swift; sourceTree = "<group>"; };
+		61E8ECAE2B752A1D00BEAFE5 /* EpisodeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +177,7 @@
 		6130E88E2B68E0B0004AE4F1 /* MyTVContents */ = {
 			isa = PBXGroup;
 			children = (
-				61B0C9CB2B6BE8A300BE86D2 /* TV */,
-				61B0C9CA2B6BE89A00BE86D2 /* Drama */,
+				614648A32B7BD81B00DA894C /* Controllers */,
 				61B0C9B32B6A96C700BE86D2 /* Base */,
 				61B0C9932B6965CF00BE86D2 /* Model */,
 				61B0C98C2B6964D800BE86D2 /* Network */,
@@ -142,10 +197,104 @@
 			path = MyTVContents;
 			sourceTree = "<group>";
 		};
+		614648992B7BD29500DA894C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				61B0C9A82B6A8F9200BE86D2 /* DramaDetailViewController.swift */,
+				61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		6146489A2B7BD29E00DA894C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				619A12A42B70409B00E83015 /* DramaSearchViewController.swift */,
+				619A12A62B7040B600E83015 /* DramaSearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		6146489B2B7BD2A600DA894C /* Episode */ = {
+			isa = PBXGroup;
+			children = (
+				614648932B7BAECC00DA894C /* DramaEpisodeViewController.swift */,
+				614648952B7BAEE000DA894C /* EpisodeView.swift */,
+			);
+			path = Episode;
+			sourceTree = "<group>";
+		};
+		6146489C2B7BD2B200DA894C /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				6146489D2B7BD2C200DA894C /* VideoViewController.swift */,
+				6146489F2B7BD2E000DA894C /* VideoView.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		614648A32B7BD81B00DA894C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				614648A62B7BD88C00DA894C /* Profile */,
+				61B0C9CB2B6BE8A300BE86D2 /* TV */,
+				61B0C9CA2B6BE89A00BE86D2 /* Drama */,
+				614648A42B7BD83500DA894C /* TabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		614648A62B7BD88C00DA894C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				614648B72B7BEAD400DA894C /* EditInfo */,
+				614648B62B7BEACC00DA894C /* ImageSelect */,
+				614648A72B7BD89A00DA894C /* ProfileViewController.swift */,
+				614648A92B7BD8B800DA894C /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		614648AD2B7BDDCC00DA894C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				614648AE2B7BDDE400DA894C /* TextFieldTableViewCell.swift */,
+				614648C62B7BF00500DA894C /* NaverImageCollectionViewCell.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		614648B62B7BEACC00DA894C /* ImageSelect */ = {
+			isa = PBXGroup;
+			children = (
+				614648B82B7BEAEC00DA894C /* ProfileImageSelectViewController.swift */,
+				614648BA2B7BEB1200DA894C /* ProfileImageSelectView.swift */,
+			);
+			path = ImageSelect;
+			sourceTree = "<group>";
+		};
+		614648B72B7BEAD400DA894C /* EditInfo */ = {
+			isa = PBXGroup;
+			children = (
+				614648B02B7BE1CC00DA894C /* EditInfoViewController.swift */,
+				614648B22B7BE1D900DA894C /* EditInfoView.swift */,
+			);
+			path = EditInfo;
+			sourceTree = "<group>";
+		};
+		614648BD2B7BECB800DA894C /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				614648BE2B7BECCA00DA894C /* NaverImageModel.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		61B0C9702B695D0E00BE86D2 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
 				61B0C9882B695DFA00BE86D2 /* ViewProtocol.swift */,
+				61E8ECAC2B7525AE00BEAFE5 /* ReuseableProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -153,10 +302,15 @@
 		61B0C9712B695D2300BE86D2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				614648AD2B7BDDCC00DA894C /* Profile */,
 				61B0C97B2B695DC400BE86D2 /* TVContentsTableViewCell.swift */,
 				61B0C98A2B695E3000BE86D2 /* ContentCollectionViewCell.swift */,
 				61B0C9B82B6A99F200BE86D2 /* DramaInfoTableViewCell.swift */,
 				61B0C9BA2B6A9A9A00BE86D2 /* DramaCastInfoCollectionViewCell.swift */,
+				61E8ECA72B75222000BEAFE5 /* SelectInfoTableViewCell.swift */,
+				6108CFD92B76110C00EF302F /* InfoCollectionViewCell.swift */,
+				6146488D2B7B657400DA894C /* SeasonCollectionViewCell.swift */,
+				614648972B7BAFC800DA894C /* EpisodeTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -166,6 +320,7 @@
 			children = (
 				61B0C9792B695D9400BE86D2 /* PosterImageView.swift */,
 				61B0C9B62B6A996D00BE86D2 /* ProfileImageView.swift */,
+				614648B42B7BE25D00DA894C /* ProfileTextField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -175,6 +330,9 @@
 			children = (
 				61B0C9772B695D7C00BE86D2 /* UIView+Extension.swift */,
 				61B0C9BC2B6AB1E000BE86D2 /* UINavigationController+Extension.swift */,
+				61E8ECA92B7523CB00BEAFE5 /* UIButton+Extension.swift */,
+				6146488F2B7B68B800DA894C /* UILabel+Extension.swift */,
+				614648912B7B9FB900DA894C /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -184,6 +342,7 @@
 			children = (
 				61B0C9752B695D5A00BE86D2 /* EndPoint.swift */,
 				61E8EC062B71396D00BEAFE5 /* ImageStyle.swift */,
+				614648AB2B7BD94500DA894C /* TabItem.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -194,6 +353,8 @@
 				61B0C98D2B6964EA00BE86D2 /* TMDBAPIManager.swift */,
 				61B0C9C62B6BE1FA00BE86D2 /* TMDBAPI.swift */,
 				61E8EC042B71349600BEAFE5 /* TMDBSessionManager.swift */,
+				614648C02B7BED1900DA894C /* NaverAPI.swift */,
+				614648C22B7BEDDF00DA894C /* NaverAPIManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -201,11 +362,14 @@
 		61B0C9932B6965CF00BE86D2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				614648BD2B7BECB800DA894C /* Image */,
 				61B0C9942B6965E900BE86D2 /* TVContentsModel.swift */,
 				61B0C9AA2B6A901A00BE86D2 /* DramaInfoModel.swift */,
 				61B0C9AD2B6A927200BE86D2 /* SimilarDramaRecommendationModel.swift */,
 				61B0C9AF2B6A931100BE86D2 /* DramaCastInfoModel.swift */,
 				619A12A82B70437500E83015 /* DramaSearchModel.swift */,
+				61E8ECAE2B752A1D00BEAFE5 /* EpisodeDetail.swift */,
+				614648A12B7BD48E00DA894C /* VideoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,10 +386,10 @@
 		61B0C9CA2B6BE89A00BE86D2 /* Drama */ = {
 			isa = PBXGroup;
 			children = (
-				61B0C9A82B6A8F9200BE86D2 /* DramaDetailViewController.swift */,
-				61B0C9CE2B6BEA7400BE86D2 /* DramaView.swift */,
-				619A12A42B70409B00E83015 /* DramaSearchViewController.swift */,
-				619A12A62B7040B600E83015 /* DramaSearchView.swift */,
+				6146489C2B7BD2B200DA894C /* Video */,
+				6146489B2B7BD2A600DA894C /* Episode */,
+				6146489A2B7BD29E00DA894C /* Search */,
+				614648992B7BD29500DA894C /* Detail */,
 			);
 			path = Drama;
 			sourceTree = "<group>";
@@ -323,35 +487,63 @@
 			buildActionMask = 2147483647;
 			files = (
 				61B0C9B02B6A931100BE86D2 /* DramaCastInfoModel.swift in Sources */,
+				61E8ECA82B75222000BEAFE5 /* SelectInfoTableViewCell.swift in Sources */,
 				6130E8942B68E0B0004AE4F1 /* TVViewController.swift in Sources */,
+				614648A52B7BD83500DA894C /* TabBarController.swift in Sources */,
+				614648AA2B7BD8B800DA894C /* ProfileView.swift in Sources */,
+				614648B32B7BE1D900DA894C /* EditInfoView.swift in Sources */,
 				61B0C97A2B695D9400BE86D2 /* PosterImageView.swift in Sources */,
+				614648C12B7BED1900DA894C /* NaverAPI.swift in Sources */,
 				61B0C9AE2B6A927200BE86D2 /* SimilarDramaRecommendationModel.swift in Sources */,
+				6146488E2B7B657400DA894C /* SeasonCollectionViewCell.swift in Sources */,
 				61B0C9892B695DFA00BE86D2 /* ViewProtocol.swift in Sources */,
 				619A12A92B70437500E83015 /* DramaSearchModel.swift in Sources */,
+				614648BF2B7BECCA00DA894C /* NaverImageModel.swift in Sources */,
+				6146489E2B7BD2C200DA894C /* VideoViewController.swift in Sources */,
 				61B0C9B52B6A96D000BE86D2 /* BaseViewController.swift in Sources */,
 				61B0C98E2B6964EA00BE86D2 /* TMDBAPIManager.swift in Sources */,
 				6130E8902B68E0B0004AE4F1 /* AppDelegate.swift in Sources */,
+				614648AC2B7BD94500DA894C /* TabItem.swift in Sources */,
 				61B0C9A92B6A8F9200BE86D2 /* DramaDetailViewController.swift in Sources */,
 				61B0C97C2B695DC400BE86D2 /* TVContentsTableViewCell.swift in Sources */,
 				61B0C9BB2B6A9A9A00BE86D2 /* DramaCastInfoCollectionViewCell.swift in Sources */,
+				614648B12B7BE1CC00DA894C /* EditInfoViewController.swift in Sources */,
 				61B0C9AB2B6A901A00BE86D2 /* DramaInfoModel.swift in Sources */,
 				61B0C9C72B6BE1FA00BE86D2 /* TMDBAPI.swift in Sources */,
 				61B0C9952B6965E900BE86D2 /* TVContentsModel.swift in Sources */,
+				614648B52B7BE25D00DA894C /* ProfileTextField.swift in Sources */,
+				614648922B7B9FB900DA894C /* String+Extension.swift in Sources */,
 				619A12A72B7040B600E83015 /* DramaSearchView.swift in Sources */,
 				61B0C9CF2B6BEA7400BE86D2 /* DramaView.swift in Sources */,
 				61B0C9BD2B6AB1E000BE86D2 /* UINavigationController+Extension.swift in Sources */,
+				614648A02B7BD2E000DA894C /* VideoView.swift in Sources */,
 				61B0C9C92B6BE84600BE86D2 /* BaseView.swift in Sources */,
 				61B0C9922B69652B00BE86D2 /* APIKey.swift in Sources */,
+				614648902B7B68B800DA894C /* UILabel+Extension.swift in Sources */,
+				614648962B7BAEE000DA894C /* EpisodeView.swift in Sources */,
+				61E8ECAA2B7523CB00BEAFE5 /* UIButton+Extension.swift in Sources */,
+				61E8ECAD2B7525AE00BEAFE5 /* ReuseableProtocol.swift in Sources */,
+				614648B92B7BEAEC00DA894C /* ProfileImageSelectViewController.swift in Sources */,
 				61B0C9B72B6A996D00BE86D2 /* ProfileImageView.swift in Sources */,
+				61E8ECAF2B752A1D00BEAFE5 /* EpisodeDetail.swift in Sources */,
 				61E8EC072B71396D00BEAFE5 /* ImageStyle.swift in Sources */,
+				614648942B7BAECC00DA894C /* DramaEpisodeViewController.swift in Sources */,
 				61B0C9762B695D5A00BE86D2 /* EndPoint.swift in Sources */,
 				619A12A52B70409B00E83015 /* DramaSearchViewController.swift in Sources */,
+				614648BB2B7BEB1200DA894C /* ProfileImageSelectView.swift in Sources */,
+				614648C32B7BEDDF00DA894C /* NaverAPIManager.swift in Sources */,
 				61B0C9782B695D7C00BE86D2 /* UIView+Extension.swift in Sources */,
 				6130E8922B68E0B0004AE4F1 /* SceneDelegate.swift in Sources */,
+				614648A82B7BD89A00DA894C /* ProfileViewController.swift in Sources */,
+				6108CFDA2B76110C00EF302F /* InfoCollectionViewCell.swift in Sources */,
 				61B0C98B2B695E3000BE86D2 /* ContentCollectionViewCell.swift in Sources */,
+				614648C72B7BF00500DA894C /* NaverImageCollectionViewCell.swift in Sources */,
 				61B0C9B92B6A99F200BE86D2 /* DramaInfoTableViewCell.swift in Sources */,
+				614648AF2B7BDDE400DA894C /* TextFieldTableViewCell.swift in Sources */,
 				61E8EC052B71349600BEAFE5 /* TMDBSessionManager.swift in Sources */,
 				61B0C9CD2B6BE8CB00BE86D2 /* TVView.swift in Sources */,
+				614648982B7BAFC800DA894C /* EpisodeTableViewCell.swift in Sources */,
+				614648A22B7BD48E00DA894C /* VideoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

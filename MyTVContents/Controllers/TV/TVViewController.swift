@@ -11,7 +11,7 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-class TVViewController: UIViewController {
+final class TVViewController: BaseViewController {
     
     let mainView = TVView()
     
@@ -28,9 +28,22 @@ class TVViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadView()
+        configureNavigationItem()
         configureTableView()
         callRequestToUseURLSession()
 //        callRequest()
+    }
+    
+    override func configureNavigationItem() {
+        navigationItem.title = "홈"
+        let searchItem = UIBarButtonItem(image: ImageStyle.search, style: .plain, target: self, action: #selector(showSearchVC))
+        searchItem.tintColor = .white
+        navigationItem.rightBarButtonItem = searchItem
+    }
+    
+    @objc private func showSearchVC() {
+        let searchVC = DramaSearchViewController()
+        navigationController?.pushViewController(searchVC, animated: true)
     }
     
     override func loadView() {
@@ -38,7 +51,7 @@ class TVViewController: UIViewController {
     }
     
     // URLSession을 사용한 네트워크 요청
-    func callRequestToUseURLSession() {
+    private func callRequestToUseURLSession() {
         let group = DispatchGroup()
         
         for index in 0...tvList.count - 1 {
@@ -63,7 +76,7 @@ class TVViewController: UIViewController {
         }
     }
     
-    func callRequest() {
+    private func callRequest() {
         let group = DispatchGroup()
         
         group.enter()
@@ -104,9 +117,15 @@ class TVViewController: UIViewController {
         }
     }
 
-    func configureTableView() {
+    private func configureTableView() {
         mainView.tableView.delegate = self
         mainView.tableView.dataSource = self
+    }
+    
+    private func showDetailVC(id: Int) {
+        let detailVC = DramaDetailViewController()
+        detailVC.id = id
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
@@ -154,6 +173,14 @@ extension TVViewController: UICollectionViewDelegate, UICollectionViewDataSource
         collectionView.reloadData()
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("클릭")
+        let section = collectionView.tag
+        let row = indexPath.row
+        let id = tvList[section].results[row].id
+        showDetailVC(id: id)
     }
 }
 

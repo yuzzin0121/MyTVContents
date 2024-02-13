@@ -13,7 +13,7 @@ class ProfileImageView: UIImageView {
         configureView()
     }
     
-    func configureView() {
+    private func configureView() {
         contentMode = .scaleAspectFill
         layer.cornerRadius = frame.height / 2
         clipsToBounds = true

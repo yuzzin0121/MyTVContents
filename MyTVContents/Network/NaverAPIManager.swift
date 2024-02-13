@@ -1,20 +1,17 @@
 //
-//  TMDBAPIManager.swift
+//  NaverAPIManager.swift
 //  MyTVContents
 //
-//  Created by 조유진 on 1/31/24.
+//  Created by 조유진 on 2/14/24.
 //
 
-import Foundation
 import Alamofire
 
-
-final class TMDBAPIManager {
-    static let shared = TMDBAPIManager()
+final class NaverAPIManager {
+    static let shared = NaverAPIManager()
+    private init() { }
     
-    private init() {}
-    
-    func fetchTv<T: Decodable>(type: T.Type, api: TMDBAPI, completionHandler: @escaping (T?, NetworkError?) -> Void) {
+    func fetchData<T: Decodable>(type: T.Type, api: NaverAPI, completionHandler: @escaping (T?, NetworkError?) -> Void) {
         
         AF.request(api.endpoint,
                    method: api.method,

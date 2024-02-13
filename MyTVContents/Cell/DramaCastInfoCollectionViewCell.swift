@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DramaCastInfoCollectionViewCell: UICollectionViewCell {
+final class DramaCastInfoCollectionViewCell: UICollectionViewCell {
     let knownForDepartmentLabel = UILabel()
     let profileImageView = ProfileImageView(frame: .zero)
     let nameLabel = UILabel()
@@ -27,15 +27,19 @@ class DramaCastInfoCollectionViewCell: UICollectionViewCell {
     
     func configureCell(item: Cast?) {
         guard let item = item else { return }
-        knownForDepartmentLabel.text = item.knownForDepartment
+        if item.knownForDepartment == "Acting" {
+            knownForDepartmentLabel.text = "배우"
+        } else {
+            knownForDepartmentLabel.text = item.knownForDepartment
+        }
         
         if let imageString = item.profilPath, let url = URL(string: EndPoint.basePosterURL.rawValue + imageString) {
-            profileImageView.kf.setImage(with: url, placeholder: UIImage(systemName: "movieclapper"))
+            profileImageView.kf.setImage(with: url, placeholder: ImageStyle.movieClapper)
         } else {
-            profileImageView.image = UIImage(systemName: "movieclapper")
+            profileImageView.image = ImageStyle.movieClapper
         }
         nameLabel.text = item.name
-        roleLabel.text = item.roles[0].character
+        roleLabel.text = "역할 \(item.roles[0].character)"
     }
     
     func configureHierarchy() {
@@ -71,8 +75,8 @@ class DramaCastInfoCollectionViewCell: UICollectionViewCell {
     func configureView() {
         knownForDepartmentLabel.textAlignment = .center
         knownForDepartmentLabel.font = .boldSystemFont(ofSize: 14)
-        nameLabel.font = .systemFont(ofSize: 14)
-        roleLabel.font = .systemFont(ofSize: 14)
+        nameLabel.font = .systemFont(ofSize: 12)
+        roleLabel.font = .systemFont(ofSize: 12)
         DispatchQueue.main.async {
             self.profileImageView.layer.cornerRadius = self.profileImageView.frame.height / 2
         }

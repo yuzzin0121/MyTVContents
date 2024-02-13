@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DramaSearchViewController: UIViewController {
+final class DramaSearchViewController: UIViewController {
     let mainView = DramaSearchView()
     
     var searchedDramaList: [TV] = []
@@ -18,7 +18,7 @@ class DramaSearchViewController: UIViewController {
         configureNavigationItem()
     }
     
-    func callRequest(query: String) {
+    private func callRequest(query: String) {
         TMDBAPIManager.shared.fetchTv(type: TVContentsModel.self, api: TMDBAPI.dramaSearch(query: query)) { tvContentsModel, error in
             if error == nil {
                 guard let tvContentsModel = tvContentsModel else { return }
@@ -35,12 +35,12 @@ class DramaSearchViewController: UIViewController {
         self.view = mainView
     }
     
-    func configureCollectionView() {
+    private func configureCollectionView() {
         mainView.collectionView.delegate = self
         mainView.collectionView.dataSource = self
     }
     
-    func configureNavigationItem() {
+    private func configureNavigationItem() {
         navigationItem.title = "드라마 검색"
         navigationItem.searchController = mainView.searchController
         mainView.searchController.searchBar.delegate = self

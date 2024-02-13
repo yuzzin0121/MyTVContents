@@ -14,7 +14,7 @@ enum NetworkError: Error {
     case invalidData
 }
 
-class TMDBSessionManager {
+final class TMDBSessionManager {
     static let shared = TMDBSessionManager()
     
     private init() { }

@@ -1,14 +1,14 @@
 //
-//  DramaView.swift
+//  TVView.swift
 //  MyTVContents
 //
-//  Created by 조유진 on 2/2/24.
+//  Created by 조유진 on 2/1/24.
 //
 
 import UIKit
 import SnapKit
 
-class DramaView: BaseView {
+final class TVView: BaseView {
     let tableView = UITableView()
     
     override func configureHierarchy() {
@@ -24,9 +24,7 @@ class DramaView: BaseView {
     override func configureView() {
         tableView.backgroundColor = .black
         tableView.showsVerticalScrollIndicator = false
-        tableView.rowHeight = UIScreen.main.bounds.height / 2 - 48
-        tableView.register(DramaInfoTableViewCell.self, forCellReuseIdentifier: "DramaInfoTableViewCell")
+        tableView.rowHeight = UIScreen.main.bounds.height / 3 - 48
         tableView.register(TVContentsTableViewCell.self, forCellReuseIdentifier: "TVContentsTableViewCell")
     }
-    
 }

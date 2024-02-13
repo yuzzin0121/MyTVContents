@@ -1,14 +1,15 @@
 //
-//  TVView.swift
+//  EpisodeView.swift
 //  MyTVContents
 //
-//  Created by 조유진 on 2/1/24.
+//  Created by 조유진 on 2/13/24.
 //
 
 import UIKit
 import SnapKit
 
-class TVView: BaseView {
+
+final class EpisodeView: BaseView {
     let tableView = UITableView()
     
     override func configureHierarchy() {
@@ -17,14 +18,14 @@ class TVView: BaseView {
     
     override func configureLayout() {
         tableView.snp.makeConstraints { make in
-            make.edges.equalTo(safeAreaLayoutGuide)
+            make.edges.equalToSuperview()
         }
     }
     
     override func configureView() {
+        backgroundColor = .black
         tableView.backgroundColor = .black
-        tableView.showsVerticalScrollIndicator = false
-        tableView.rowHeight = UIScreen.main.bounds.height / 3 - 48
-        tableView.register(TVContentsTableViewCell.self, forCellReuseIdentifier: "TVContentsTableViewCell")
+        tableView.showsVerticalScrollIndicator =  false
+        tableView.rowHeight = 120
     }
 }

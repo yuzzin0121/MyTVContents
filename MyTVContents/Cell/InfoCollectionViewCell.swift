@@ -1,16 +1,14 @@
 //
-//  TVContentsCollectionViewCell.swift
+//  InfoCollectionViewCell.swift
 //  MyTVContents
 //
-//  Created by 조유진 on 1/31/24.
+//  Created by 조유진 on 2/9/24.
 //
 
 import UIKit
 
-final class TVContentsTableViewCell: UITableViewCell, ViewProtocol {
-    
-    let titleLabel = UILabel()
-    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCollectionViweFlowLayout())
+final class InfoContentTableViewCell: UITableViewCell, ViewProtocol {
+    lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: configureCollectionViewFlowLayout())
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -21,40 +19,48 @@ final class TVContentsTableViewCell: UITableViewCell, ViewProtocol {
     }
     
     func configureHierarchy() {
-        [titleLabel, collectionView].forEach {
+        [collectionView].forEach {
             contentView.addSubview($0)
         }
     }
     
     func configureLayout() {
-        titleLabel.snp.makeConstraints { make in
-            make.top.horizontalEdges.equalToSuperview().inset(16)
-        }
         collectionView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(8)
-            make.horizontalEdges.bottom.equalToSuperview().inset(16)
-            
+            make.horizontalEdges.equalToSuperview().inset(16)
+            make.verticalEdges.equalToSuperview().inset(8)
         }
     }
     
     func configureView() {
         contentView.backgroundColor = .black
-        titleLabel.font = .boldSystemFont(ofSize: 16)
-        titleLabel.textColor = .white
         collectionView.backgroundColor = .black
-        collectionView.showsHorizontalScrollIndicator = false
+//        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        collectionView.register(SeasonCollectionViewCell.self, forCellWithReuseIdentifier: SeasonCollectionViewCell.identifier)
         collectionView.register(DramaCastInfoCollectionViewCell.self, forCellWithReuseIdentifier: DramaCastInfoCollectionViewCell.identifier)
         collectionView.register(ContentCollectionViewCell.self, forCellWithReuseIdentifier: ContentCollectionViewCell.identifier)
     }
     
-    func configureCollectionViweFlowLayout()  -> UICollectionViewFlowLayout {
+    private func configureCollectionViewFlowLayout()  -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         let spacing = 12
         layout.itemSize = CGSize(width: 110, height: 176)
         layout.minimumLineSpacing = 12
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         return layout
+    }
+    
+    func changeCollectionViewLayout(isSeason: Bool) {
+        let layout = UICollectionViewFlowLayout()
+        if isSeason {
+            layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 12, height: 130)
+        } else {
+            layout.itemSize = CGSize(width: 110, height: 176)
+        }
+        layout.minimumLineSpacing = 12
+        layout.scrollDirection = .vertical
+        collectionView.collectionViewLayout = layout
     }
     
     required init?(coder: NSCoder) {
