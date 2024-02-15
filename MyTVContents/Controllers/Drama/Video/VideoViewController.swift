@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class VideoViewController: UIViewController {
+final class VideoViewController: BaseViewController {
     let mainView = VideoView()
 
     var seriesId: Int? = nil
@@ -15,6 +15,14 @@ final class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         callRequest()
+    }
+    override func configureNavigationItem() {
+        navigationItem.title = "비디오"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: ImageStyle.arrowLeft, style: .plain, target: self, action: #selector(popView))
+    }
+
+    @objc func popView() {
+        navigationController?.popViewController(animated: true)
     }
     
     private func callRequest() {

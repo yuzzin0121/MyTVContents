@@ -34,7 +34,6 @@ final class InfoContentTableViewCell: UITableViewCell, ViewProtocol {
     func configureView() {
         contentView.backgroundColor = .black
         collectionView.backgroundColor = .black
-//        collectionView.showsHorizontalScrollIndicator = false
         collectionView.showsVerticalScrollIndicator = false
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.register(SeasonCollectionViewCell.self, forCellWithReuseIdentifier: SeasonCollectionViewCell.identifier)

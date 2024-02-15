@@ -40,7 +40,7 @@ final class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
     
     func configureHierarchy() {
         contentView.addSubview(posterImageView)
-        posterImageView.addSubview(gradientView)
+        contentView.addSubview(gradientView)
         gradientView.addSubview(titleLabel)
     }
     
@@ -50,7 +50,7 @@ final class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
         }
         
         gradientView.snp.makeConstraints { make in
-            make.edges.equalTo(posterImageView)
+            make.edges.equalToSuperview()
         }
         
         titleLabel.snp.makeConstraints { make in
@@ -64,6 +64,7 @@ final class ContentCollectionViewCell: UICollectionViewCell, ViewProtocol {
         }
         titleLabel.font = .boldSystemFont(ofSize: 14)
         titleLabel.textColor = .white
+        
     }
     
     required init?(coder: NSCoder) {

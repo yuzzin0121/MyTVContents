@@ -26,9 +26,14 @@ final class DramaEpisodeViewController: BaseViewController {
     override func loadView() {
         view = mainView
     }
-    
+  
     override func configureNavigationItem() {
         navigationItem.title = seasonName
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: ImageStyle.arrowLeft, style: .plain, target: self, action: #selector(popView))
+    }
+
+    @objc func popView() {
+        navigationController?.popViewController(animated: true)
     }
     
     private func configureTableView() {

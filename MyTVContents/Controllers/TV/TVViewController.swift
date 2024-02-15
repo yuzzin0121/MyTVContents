@@ -144,7 +144,6 @@ extension TVViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-
 }
 
 extension TVViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -170,13 +169,10 @@ extension TVViewController: UICollectionViewDelegate, UICollectionViewDataSource
             cell.posterImageView.image = ImageStyle.movieClapper
         }
         
-        collectionView.reloadData()
-        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("클릭")
         let section = collectionView.tag
         let row = indexPath.row
         let id = tvList[section].results[row].id

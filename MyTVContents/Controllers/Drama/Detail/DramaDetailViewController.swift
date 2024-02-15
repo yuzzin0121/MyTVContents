@@ -98,6 +98,11 @@ final class DramaDetailViewController: BaseViewController {
     
     override func configureNavigationItem() {
         navigationItem.title = "드라마 세부 정보"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: ImageStyle.arrowLeft, style: .plain, target: self, action: #selector(popView))
+    }
+
+    @objc func popView() {
+        navigationController?.popViewController(animated: true)
     }
     
     private func configureTableView() {
